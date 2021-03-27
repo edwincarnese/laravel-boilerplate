@@ -27,17 +27,9 @@
                     <th>Full Name</th>
                     <th>Username</th>
                     <th>Email</th>
+                    <th class="text-center">Action</th>
                   </tr>
                 </thead>
-                <tbody>
-                  @foreach($users as $user)
-                    <tr>
-                      <td>{{ $user->full_name }}</td>
-                      <td>{{ $user->username }}</td>
-                      <td>{{ $user->email }}</td>
-                    </tr>
-                  @endforeach
-                </tbody>
               </table>
             </div>
           </div>
@@ -54,4 +46,31 @@
 <script src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
 <script src="{{ asset('plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
 <script src="{{ asset('plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+<script>
+  $(function () {
+    const table = $('.data-table').DataTable({
+      processing: true,
+      serverSide: true,
+      ajax: "{{ route('users.index') }}",
+      columns: [
+        {
+          data: 'full_name', 
+          name: 'full_name'
+        },
+        {
+          data: 'username', 
+          name: 'username'
+        },
+        {
+          data: 'email', 
+          name: 'email'
+        },
+        {
+          data: 'action', 
+          name: 'action', 
+        },
+      ]
+    });
+  });
+</script>
 @endsection

@@ -11,6 +11,8 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable, SoftDeletes;
 
+    protected $appends = ['full_name'];
+
     protected $fillable = [
         'first_name',
         'last_name',
