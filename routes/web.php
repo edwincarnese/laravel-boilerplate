@@ -15,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index']);
+Route::get('/home', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('home');
+Route::resource('users', App\Http\Controllers\Admin\UserController::class)->except(['create']);
