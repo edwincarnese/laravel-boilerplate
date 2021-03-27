@@ -21,12 +21,12 @@
               </div>
             </div>
             <div class="card-body">
-              <table class="table table-bordered table-striped">
+              <table class="table table-bordered table-striped data-table">
                 <thead>
                   <tr>
-                    <th>FULL NAME</th>
-                    <th>USERNAME</th>
-                    <th>EMAIL</th>
+                    <th>Full Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -46,7 +46,7 @@
     </div>
   </div>
 </div>
-@include('pages.user._create')
+@include('pages.admin.user._create')
 @endsection
 
 @section('js')
@@ -54,5 +54,4 @@
 <script src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
 <script src="{{ asset('plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
 <script src="{{ asset('plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
-<script src="{{ asset('js/custom.js')}}"></script>
 @endsection
