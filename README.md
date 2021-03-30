@@ -2,16 +2,6 @@
 
 _Laravel Boilerplate_  
 
-## Table of Contents
-
-- [Features](#features)
-- [System Requirements](#system-requirements)
-- [Installation](#installation)
-- [Run](#run)
-- [How to Contribute](#how-to-contribute)
-- [Issues](#issues)
-- [License](#license)
-
 ## Features
 
 - Administration Dashboard with [AdminLTE](https://adminlte.io/)
@@ -47,7 +37,7 @@ $ php artisan key:generate
 ```
 6. Run these commands to create the tables within the defined database and populate seed data
 ```
-php artisan migrate --seed
+$ php artisan migrate --seed
 ```
 
 ## Run
@@ -61,7 +51,7 @@ Now you can browse the site at [http://localhost:8080](http://localhost:8080)
 
 ## How to Contribute
 
-Please free to make any pull requests, or e-mail me a feature request you would like to see in the future to Edwin Carnese at (edwincarnese@gmail.com).
+You can fork the project and once you're done making any change please feel free to make any pull requests, or e-mail me a feature request you would like to see in the future to Edwin Carnese at (edwincarnese@gmail.com).
 
 ## Issues
 
