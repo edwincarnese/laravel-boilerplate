@@ -1,5 +1,5 @@
 <footer class="main-footer">
-  <strong>Copyright &copy; {{ now()->year }} <a href="{{ config('app.url') }}">{{ config('app.name', 'Laravel') }}</a>.</strong>
+  <strong>Copyright &copy; {{ now()->year }} <a href="/">{{ config('app.name', 'Laravel Boilerplate') }}</a>.</strong>
   All rights reserved.
   <div class="float-right d-none d-sm-inline-block">
     <b>Version</b> 1.0
