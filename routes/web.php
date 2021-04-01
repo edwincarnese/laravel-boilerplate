@@ -17,4 +17,4 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index']);
 Route::get('/home', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('home');
-Route::resource('users', App\Http\Controllers\Admin\UserController::class)->except(['create']);
+Route::resource('users', App\Http\Controllers\Admin\UserController::class)->except(['create', 'edit']);
