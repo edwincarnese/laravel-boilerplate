@@ -1,6 +1,6 @@
 ## Laravel Boilerplate (Current: Laravel 8)
 
-_Laravel Boilerplate_  
+***Laravel Boilerplate***
 
 ## Features
 
@@ -44,14 +44,16 @@ $ php artisan migrate --seed
 To start the PHP built-in server
 ```
 $ php artisan serve --port=8080
+
 or
+
 $ php -S localhost:8080 -t public/
 ```
 Now you can browse the site at [http://localhost:8080](http://localhost:8080)
 
 ## How to Contribute
 
-You can fork the project and once you're done making any change please feel free to make any pull requests, or e-mail me a feature request you would like to see in the future to Edwin Carnese at (edwincarnese@gmail.com).
+You can fork the project and once you're done making any changes please feel free to make any pull requests, or e-mail me a feature request you would like to see in the future to Edwin Carnese at (edwincarnese@gmail.com).
 
 ## Issues
 
@@ -59,4 +61,4 @@ If you come across any issues please report in [Github Issues](https://github.co
 
 ## License
 
-This Laravel boilerplate is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This **Laravel boilerplate** is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
