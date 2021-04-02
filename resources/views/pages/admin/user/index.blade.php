@@ -3,6 +3,8 @@
 @section('css')
 <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
 <link rel="stylesheet" href="{{ asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
 @endsection
 
 @section('content')
@@ -16,7 +18,7 @@
             <div class="card-header">
               <h3 class="card-title">List of users</h3>
               <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#create-modal">
+                <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#form-modal">
                   <i class="fas fa-plus"></i></button>
               </div>
             </div>
@@ -46,31 +48,10 @@
 <script src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
 <script src="{{ asset('plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
 <script src="{{ asset('plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
-<script>
-  $(function () {
-    const table = $('.data-table').DataTable({
-      processing: true,
-      serverSide: true,
-      ajax: "{{ route('users.index') }}",
-      columns: [
-        {
-          data: 'full_name', 
-          name: 'full_name'
-        },
-        {
-          data: 'username', 
-          name: 'username'
-        },
-        {
-          data: 'email', 
-          name: 'email'
-        },
-        {
-          data: 'action', 
-          name: 'action', 
-        },
-      ]
-    });
-  });
-</script>
+<script src="{{ asset('plugins/sweetalert2/sweetalert2@10.min.js') }}"></script>
+<script src="{{ asset('plugins/jquery-validation/jquery.validate.min.js') }}"></script>
+<script src="{{ asset('plugins/jquery-validation/additional-methods.min.js') }}"></script>
+<script src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
+<script src="{{ asset('app/_shared.js') }}"></script>
+<script src="{{ asset('app/user/index.js') }}"></script>
 @endsection
