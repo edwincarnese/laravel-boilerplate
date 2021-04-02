@@ -5,8 +5,12 @@
 ## Features
 
 - Administration Dashboard with [AdminLTE](https://adminlte.io/)
+- Users Management
+- Serverside Datatable
+- Font Awesome, SweetAlert2, and ToastrJs
 - Responsive Layout
-- Font Awesome and SweetAlert2
+
+More awesome features will be forthcoming.
 
 ## System Requirements
 
