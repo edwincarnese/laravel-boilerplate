@@ -17,11 +17,11 @@ toastr.options = {
   }
 
 function loading() {
-    $('#save-form').prop('disabled', true);
-    $('#save-form').html('Saving... <i class="fas fa fa-sync-alt fa-spin"></i>');
+    $('#submit-form').prop('disabled', true);
+    $('#submit-form').html('Saving... <i class="fas fa fa-sync-alt fa-spin"></i>');
 }
 
 function unloading() {
-    $('#save-form').prop('disabled', false);
-    $('#save-form').html('Save');
+    $('#submit-form').prop('disabled', false);
+    $('#submit-form').html('Save');
 }

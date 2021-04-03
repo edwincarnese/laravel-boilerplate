@@ -18,7 +18,7 @@
             <div class="card-header">
               <h3 class="card-title">List of users</h3>
               <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#form-modal">
+                <button type="button" class="btn btn-tool" onclick="formModalType(['POST','\/users'])">
                   <i class="fas fa-plus"></i></button>
               </div>
             </div>
@@ -40,7 +40,7 @@
     </div>
   </div>
 </div>
-@include('pages.admin.user._create')
+@include('pages.admin.user._form')
 @endsection
 
 @section('js')
