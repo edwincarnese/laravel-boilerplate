@@ -1,4 +1,6 @@
 let users;
+let _type = "POST";
+let _url = "/users";
 
 $(function () {
   users = $('.data-table').DataTable({
@@ -40,8 +42,8 @@ $.validator.setDefaults({
     };
     
     $.ajax({
-      type: "POST",
-      url: "/users",
+      type: _type,
+      url: _url,
       headers: {
         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       },
@@ -59,13 +61,18 @@ $.validator.setDefaults({
       error: function(data) { 
         unloading();
 
-        const err = data.responseJSON.errors;
-        let errMesssage = '';
-        for(let key in err){
-          errMesssage += err[key] + '<br>';
+        if(data.responseJSON.errors) {
+          let errMesssage = '';
+          for(let key in err){
+            errMesssage += err[key] + '<br>';
+          }
+          
+          $('#error-message').empty().append(errMesssage);
+        } 
+        else {
+          const err = data.responseJSON;
+          Swal.fire(err.title, err.text, err.icon);
         }
-        
-        $('#error-message').empty().append(errMesssage);
       }  
     });
   }
@@ -127,6 +134,10 @@ $('#form').validate({
   }
 });
 
+function popuplateDataTable() {
+  users.row($(this).parents('tr')).remove().draw();
+}
+
 function deleteUser(id) {
   Swal.fire({
     title: 'Are you sure?',
@@ -158,6 +169,18 @@ function deleteUser(id) {
   });
 }
 
-function popuplateDataTable() {
-  users.row($(this).parents('tr')).remove().draw();
+function formModalType(method) {
+  _type = method[0];
+  _url = method[1];
+
+  if(_type == "POST") {
+    $('#form-credentials').show();
+    $('#form-passwords').show();
+  }
+  else if(_type == "PUT" || _type == "PATCH") {
+    $('#form-credentials').hide();
+    $('#form-passwords').hide();
+  }
+
+  $('#form-modal').modal('toggle');
 }
