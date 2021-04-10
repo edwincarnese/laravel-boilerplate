@@ -51,7 +51,7 @@ class UserController extends Controller
 
     public function show(User $user)
     {
-        return $user;
+        return view('pages.admin.user.show', compact('user'));
     }
 
     public function update(UserRequest $request, $user_id)
