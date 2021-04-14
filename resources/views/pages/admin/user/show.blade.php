@@ -1,3 +1,5 @@
+@extends('layouts.app')
+
 @section('css')
 <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
 <link rel="stylesheet" href="{{ asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
@@ -7,7 +9,12 @@
 
 @section('content')
 <div class="content-wrapper">
-    @include('partials.breadcrumb', ['title' => 'Users'])
+  @include('partials.breadcrumb', ['title' => 'Users'])
+  <div class="content">
+    <div class="container-fluid">
+    </div>
+  </div>
+</div>
 @endsection
 
 @section('js')
